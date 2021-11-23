@@ -1,0 +1,242 @@
+/*
+        Devoir HTML-CSS-BOOTSTRAP POUR DIGINAMIC - Novembre 2021 
+*/
+
+/* ========= SETUP */
+
+:root {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: auto;
+
+  /* BASED COLOR VARIABLES */
+  --dark-first: #000000;
+  --dark-second: #14213d;
+  --pop-first: #fca311;
+  --pop-second: #fb8500;
+  --light-first: #e5e5e5;
+  --light-first-50percent: #e5e5e5e8;
+  --light-second: #ffffff;
+}
+
+/* KEY FRAMES ANIMATION */
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  75%{
+    transform: translateX(0);
+
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ========== GENERAL */
+
+body {
+  /* box size */
+  width: 100%;
+  height: auto;
+  /* behaviour */
+  box-sizing: border-box;
+  /* style */
+  color: var(--dark-second);
+  background-color: var(--dark-first);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+  
+}
+
+.main-container {
+  /* box size */
+  width: 100vw;
+  height: auto;
+  /* behaviour */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+footer{
+  /* behaviour */
+  position: static;
+  height: 3em;
+  /* style */
+  background-color: var(--dark-first);
+}
+
+h2{
+  text-align: center;
+}
+
+p {
+  /* box size */
+  letter-spacing: 0.2em;
+  line-height: 1;
+  /* behaviour */
+  /* style */
+  font-size: 1rem;
+  text-align: justify;
+}
+
+
+
+/* ========= Template general de du containe card : main-container */
+.card-border {
+  /* box size */
+  z-index: 1;
+  width: 100vw;
+  max-width: 1100px;
+  padding: 0% 0%;
+  box-sizing: content-box;
+  /* behaviour */
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;  
+  justify-content:space-around;
+}
+
+.card-content{
+  /* box size */
+  width: 90%;
+  height: auto;
+  box-sizing: border-box;
+  /* behaviour */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: baseline;
+  align-items: center;
+  /* style */
+  color: var(--dark-second);
+  background-color: var(--light-first-50percent);
+}
+
+.card-content .card-header {
+  width: 100%;
+  box-shadow: 0px 0px 15px var(--dark-second) ;
+}
+.card-content article.card-body {
+  /* box size */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ========= INDIVIDUALS ELEMENTS*/
+
+
+/* SECTION -> HEADER et Navbar */
+
+.nav-bar{
+  /* box size */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  /* style */
+  background-color: var(--dark-first);
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+
+.img-fluid {
+  min-width: 45px;
+  max-width: 100px;
+}
+
+
+.nav-bar .nav{
+  flex-direction: column;
+  line-height: 5px;
+  text-align: right;
+
+}
+
+@media screen  and (min-width: 520px) {
+	.nav-bar .nav {
+    flex-direction: row;
+	}
+}
+
+.nav-link {
+  color: var(--light-first);
+}
+
+.nav-link:hover{
+  color: var(--pop-first);
+}
+
+
+/* SECTION -> Presentation*/
+/* RAS */
+
+
+/* SECTION -> Services */
+#services{
+width: 90%;
+max-width: 988px;
+}
+/* SECTION -> Forumulaire Devis */
+#form-devis form{
+  font-size: 0.8rem;
+}
+
+#checkboxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+button {
+  margin: 1rem 0.5rem;
+}
+
+/* SECTION -> Contact */
+#info .card-body {
+  margin: 0 auto;
+
+}
+.contact{
+  width: max-content;
+  margin: 0 auto;
+}
+
+#contact-text{
+display: inline;
+letter-spacing: 0;
+}
+
+.far, 
+.fas{
+  margin-right: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* maps */
+.google-maps{
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* SECTION -> Footer */
+footer div{
+  height: auto;
+  color: var(--light-first);
+  letter-spacing: 0rem;
+  font-size: 0.1rem;
+  text-align: center;
+  /* margin: 2rem; */
+}
+
+footer p {
+  text-align: center;  
+  margin: 0 auto;
+}
+
