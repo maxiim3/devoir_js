@@ -1,5 +1,5 @@
 /*
-        Devoir HTML-CSS-BOOTSTRAP POUR DIGINAMIC - Novembre 2021 
+        Devoir JavaScript POUR DIGINAMIC - Novembre 2021 
 */
 
 /* ========= SETUP */
@@ -61,6 +61,7 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
+
 
 footer{
   /* behaviour */
@@ -140,8 +141,13 @@ p {
   top: 0;
   z-index: 9;
   /* style */
-  background-color: var(--dark-first);
+  background-color: white;
   animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+/* FX ON SCROLL */
+.nav-bar-fx{
+  background-color: var(--dark-first);
 }
 
 
@@ -150,25 +156,26 @@ p {
   max-width: 100px;
 }
 
-
 .nav-bar .nav{
   flex-direction: column;
   line-height: 5px;
   text-align: right;
-
-}
-
-@media screen  and (min-width: 520px) {
-	.nav-bar .nav {
-    flex-direction: row;
-	}
 }
 
 .nav-link {
-  color: var(--light-first);
+  color: var(--pop-second);
 }
 
 .nav-link:hover{
+  color: var(--dark-first);
+}
+
+/* FX ONSCROLL */
+.nav-link-fx {
+  color: var(--light-first);
+}
+
+.nav-link-fx:hover{
   color: var(--pop-first);
 }
 
@@ -238,5 +245,16 @@ footer div{
 footer p {
   text-align: center;  
   margin: 0 auto;
+}
+
+
+
+/* === Media -> Responsive */
+
+@media screen  and (min-width: 520px) {
+	.nav-bar .nav {
+    flex-direction: row;
+	}
+
 }
 
